@@ -53,26 +53,6 @@ void initializeRobot()
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-//                                         Main Task
-//
-// The following is the main code for the autonomous robot operation. Customize as appropriate for
-// your specific robot.
-//
-// The types of things you might do during the autonomous phase (for the 2008-9 FTC competition)
-// are:
-//
-//   1. Have the robot follow a line on the game field until it reaches one of the puck storage
-//      areas.
-//   2. Load pucks into the robot from the storage bin.
-//   3. Stop the robot and wait for autonomous phase to end.
-//
-// This simple template does nothing except play a periodic tone every few seconds.
-//
-// At the end of the autonomous period, the FMS will autonmatically abort (stop) execution of the program.
-//
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 task main()
 {
