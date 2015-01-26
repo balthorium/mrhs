@@ -50,10 +50,10 @@ task main()
 			{
 				if(joy1Btn(6) == 1) //L Bumper
 				{
-					motor[C1_1] = 100;
-					motor[C1_2] = 100;
-					motor[C2_1] = 100;
-					motor[C2_2] = 100;
+					motor[C1_1] = -100;
+					motor[C1_2] = -100;
+					motor[C2_1] = -100;
+					motor[C2_2] = -100;
 				}
 				else
 				{
@@ -101,14 +101,14 @@ task main()
 				servo[servo1] = 220;
 				servo[servo2] = 20;
 				starboard_down = true;
-				wait10Msec(50);
+				wait10Msec(30);
 			}
 			else
 			{
 				servo[servo1] = 30;
 				servo[servo2] = 230;
 				starboard_down = false;
-				wait10Msec(50);
+				wait10Msec(30);
 			}
 		}
 
@@ -120,16 +120,34 @@ task main()
 				servo[servo3] = 240;
 				servo[servo4] = 30;
 				port_down = true;
-				wait10Msec(50);
+				wait10Msec(30);
 			}
 			else
 			{
 				servo[servo3] = 40;
 				servo[servo4] = 230;
 				port_down = false;
-				wait10Msec(50);
+				wait10Msec(30);
+			}
+		}
+
+		//Hullside Servos
+		if(joy2Btn(2) == 1)
+		{
+			if(!hull_down)
+			{
+				servo[servo5] = 170;
+				servo[servo6] = 80;
+				hull_down = true;
+				wait10Msec(30);
+			}
+			else
+			{
+				servo[servo5] = 0;
+				servo[servo6] = 250;
+				hull_down = false;
+				wait10Msec(30);
 			}
 		}
 	}
-
 }
